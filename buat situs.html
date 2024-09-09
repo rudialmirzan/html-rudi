@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Login</title>
+    <style>
+        body {
+            background-color: #609fe7;
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #040b0f;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #fff;
+        }
+        input[type="email"], input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        .captcha-container {
+            margin: 20px 0;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #69b3e7;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #007bff;
+        }
+        .forgot-password {
+            text-align: right;
+            color: #fff;
+        }
+        .forgot-password a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Join kuy</h2>
+        <form action="buat situ ke dua.html" method="post">
+            <input type="email" name="email" placeholder="Masukkan Alamat E-mail" required>
+            <input type="password" name="password" placeholder="Masukkan Password" required>
+            <div class="captcha-container">
+                <div class="g-recaptcha" data-sitekey="6Lc_yourActualSiteKey"></div>
+            </div>
+            <input type="submit" value="Login">
+        </form>
+        <div class="forgot-password">
+            <a href="kamu goblok.html">Lupa Password?</a>
+        </div>
+    </div>
+</body>
+</html>

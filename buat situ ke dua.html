@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Joki Judi</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000000;
+            color: #142581;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #0056b3;
+        }
+
+        .header p {
+            margin: 5px 0;
+            color: #333;
+        }
+
+        .product-status {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .product-status img {
+            width: 150px; /* Adjust size as needed */
+            margin-bottom: 15px;
+        }
+
+        .product-status h2 {
+            margin: 0;
+            font-size: 20px;
+            color: #e00404;
+        }
+
+        .product-status p {
+            margin: 10px 0;
+            color: #2760aa;
+        }
+
+        .payment-method, .discount-code {
+            margin-bottom: 20px;
+        }
+
+        .payment-method label, .discount-code label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .payment-method select, .discount-code select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            background-color: #f9f9f9;
+        }
+
+        .buy-button {
+            display: block;
+            width: 100%;
+            background-color: #0056b3;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .buy-button:disabled {
+            background-color: #2867dd;
+            cursor: not-allowed;
+        }
+
+        .terms {
+            text-align: center;
+            font-size: 12px;
+            color: #9c9b9b;
+            margin-top: 15px;
+        }
+
+        .terms a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        .terms a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ayok Anak Muda</h1>
+            <p>Malam ini naik jelas</p>
+        </div>
+        <div class="product-status">
+            <img src="images.jpeg" alt="Not Available Icon">
+            <h2>Pinjam dulu seratus biar kita kalikan</h2>
+            <p>"Uang yang hilang bisa dicari, tapi waktu yang hilang takkan pernah kembali"</p>
+        </div>
+        <div class="payment-method">
+            <label for="payment-method">Pilih metode pelunasan</label>
+            <select id="payment-method" onchange="updateButtonLink()">
+                <option value="dana">DANA</option>
+                <option value="ovo">OVO</option>
+                <option value="qris">QRIS</option>
+            </select>
+        </div>
+        <div class="discount-code">
+            <label for="discount-code">Gunakan Akun mana</label>
+            <select id="discount-code">
+                <option value="dana">WINSTAR</option>
+                <option value="ovo">KAWIN77</option>
+                <option value="qris">SLOTBOSS</option>
+            </select>
+        </div>
+        <button class="buy-button" id="buy-button" onclick="location.href='dana.html'">
+            Mulai
+        </button>
+        <div class="terms">
+            <p>Pastikan Anda sudah membaca dan menyetujui <a href="https://www.instagram.com/rudialmirzan/?hl=en">Ketentuan rudialmirzan</a></p>
+        </div>
+    </div>
+    <script>
+        function updateButtonLink() {
+            var paymentMethod = document.getElementById("payment-method").value;
+            var buyButton = document.getElementById("buy-button");
+
+            console.log("Selected payment method: " + paymentMethod);
+
+            if (paymentMethod === "dana") {
+                buyButton.setAttribute("onclick", "location.href='dana.html'");
+            } else if (paymentMethod === "ovo") {
+                buyButton.setAttribute("onclick", "location.href='ovo.html'");
+            } else if (paymentMethod === "qris") {
+                buyButton.setAttribute("onclick", "location.href='qris.html'");
+            }
+        }
+    </script>
+</body>
+</html>

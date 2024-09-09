@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foto dan Upload</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button-container {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #010203;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            color: #fff;
+            text-align: center;
+            width: 200px;
+        }
+
+        .button-container img {
+            width: 186px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .button-container p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .upload-btn, .finish-btn {
+            background-color: #0056b3;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .upload-btn:hover, .finish-btn:hover {
+            background-color: #004494;
+        }
+
+        .upload-input {
+            display: none;
+        }
+
+        .finish-btn {
+            background-color: #28a745;
+        }
+
+        .finish-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="button-container">
+            <img id="photo" src="logo qris.jpg" alt="Photo">
+            <p>scen</p>
+            <label for="file-upload" class="upload-btn">Unggah Bukti</label>
+            <input type="file" id="file-upload" class="upload-input" accept="image/*" onchange="previewImage(event)">
+            <a href="anjay.html" class="finish-btn">Selesai</a>
+        </div>
+    </div>
+    <script>
+        function previewImage(event) {
+            var photo = document.getElementById('photo');
+            var file = event.target.files[0];
+            var reader = new FileReader();
+            
+            reader.onload = function(e) {
+                photo.src = e.target.result;
+            }
+            
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+</body>
+</html>
